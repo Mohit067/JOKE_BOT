@@ -24,7 +24,6 @@ bot.on('message', (msg) => {
 bot.onText(/\/Hindijoke/, async (msg) => {
     try {
         const response = await axios.get('https://joke-api-1-2okz.onrender.com/jokes/random');
-        console.log(response)
         let joke = response.data.joke;
         bot.sendMessage(msg.chat.id, joke);
     } catch (error) {
@@ -38,7 +37,6 @@ bot.onText(/\/Hindijoke/, async (msg) => {
 bot.onText(/\/Englishjoke/, async (msg) => {
     try {
         const response = await axios.get('https://official-joke-api.appspot.com/random_joke'); // english
-        console.log(response)
         const setup = response.data.setup;
         const punchline = response.data.punchline;
         bot.sendMessage(msg.chat.id, `${setup}\n\n${punchline}`);
