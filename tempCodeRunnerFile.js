@@ -1,15 +1,15 @@
-const TelegramBot =  require('node-telegram-bot-api');
+// const TelegramBot =  require('node-telegram-bot-api');
 
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
 
-dotenv.config();
+// dotenv.config();
 
-// console.log(process.env.TELEGRAM_TOKEN);
+// // console.log(process.env.TELEGRAM_TOKEN);
 
-const bot = new TelegramBot(process.env.TELEGRAM_TOKEN, {polling: true});
+// const bot = new TelegramBot(process.env.TELEGRAM_TOKEN, {polling: true});
 
-bot.on('message', (option) => {
-    console.log("message received on the bot", option);
+// bot.on('message', (option) => {
+//     console.log("message received on the bot", option);
 
-    bot.sendMessage(option.chat.id, "hello i am bot");
-})
+//     bot.sendMessage(option.chat.id, "hello i am bot");
+// })
